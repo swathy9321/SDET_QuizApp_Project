@@ -1,0 +1,23 @@
+<div class="full-height">
+  <div class="row full-height m-0">
+    <div class="col-12 col-sm-12 col-md-12 p-0 d-none d-sm-none d-md-block">
+      <div class="auth-header d-flex justify-content-center">
+        <div class="col-9">
+          <span class="header-text">
+            Welcome to the Quiz MAster World..
+          </span>
+        </div>
+        
+        <div class="col-3">
+          <button class="primary-btn" routerLink="/" *ngIf="isLogin"> Log Out </button>
+        </div>
+        
+      </div>
+
+    </div>
+   
+    <div class="col-12 col-sm-12 col-md-12 p-0">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

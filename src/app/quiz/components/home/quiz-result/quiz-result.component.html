@@ -1,0 +1,18 @@
+<h2 *ngIf="isLogged">Your Results:</h2>
+<br>
+<div *ngIf="quizes">
+    <p>Scrore:{{answerCount}}/{{questionCount}}</p>
+    <hr>
+    <div *ngFor = "let quiz of quizes;let i=index">
+    <h3>Question {{i+1}}</h3>
+    <p>{{quiz.question}}</p>
+    <div *ngFor = "let choice of quiz.choices;let in=index">
+        <div class="radiocontainer" id="label2" 
+        [ngClass]="!quiz.result&&quiz.answer==in+1?'grey':quiz.selectedId==in+1&&quiz.result?'green':!quiz.result&&quiz.selectedId==in+1? 'red': ''"> {{choice}}</div>
+    </div>
+    <hr>
+</div>
+</div>
+    
+
+

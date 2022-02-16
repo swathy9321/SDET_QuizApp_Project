@@ -1,0 +1,16 @@
+<h3>All Questions</h3>
+<hr>
+
+<div *ngFor="let quiz of quizes;let i=index">
+    <h3>Question {{i+1}}</h3>
+    <p>{{quiz.question}}</p>
+    <div *ngFor="let choice of quiz.choices">
+        <div class="radiocontainer" id="label2">{{choice}}</div>
+    </div>
+    <mat-card-actions>
+        <div class="delete-button">
+            <button mat-button (click)="deleteQuiz(quiz.id)"> DELETE </button>
+        </div>
+    </mat-card-actions>
+    <hr>
+</div>

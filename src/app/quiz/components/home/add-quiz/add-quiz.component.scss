@@ -1,0 +1,27 @@
+mat-card{
+    background-color: #dadce0;
+}
+mat-card-actions{
+    margin-top: 2%;
+    padding-left: 2%;
+}
+.button{
+    background: rgb(104, 105, 104);
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px 30px!important;
+    font-size: 15px;
+}
+.option-group{
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+.label-group{
+    margin-right: 2%;
+}

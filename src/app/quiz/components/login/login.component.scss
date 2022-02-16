@@ -1,0 +1,84 @@
+@import "../../../../assets/styles/colors.scss";
+
+.login-header {
+  height: 50px;
+  width: 100%;
+  background-color: $green;
+  padding: 8px 15%;
+  text-align: center;
+
+  .sign-up-header-btn {
+    background: $white;
+    color: $green;
+    border: none;
+    padding: 0px 20px;
+    line-height: 35px;
+  }
+
+  .header-text {
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 20px;
+    color: $white;
+    font-weight: 500;
+  }
+}
+
+.login-content {
+  // height: calc(100% - 50px);
+  padding: 5% 30%;
+
+  .login-welcome-text {
+    color: $green;
+    margin-bottom: 25px;
+  }
+
+  .login-form-div {
+    min-height: 400px;
+
+    .login-card-header {
+      height: 50px;
+      background: $green;
+      color: $white;
+      text-align: center;
+      font-size: 20px;
+      line-height: 50px;
+    }
+
+    .form-content {
+      padding: 5% 10%;
+      min-height: 200px;
+    }
+
+    .social-media-text {
+      color: $grey;
+    }
+
+    .face-book-btn {
+      color: $white;
+      border: none;
+      background-color: $fb-blue;
+      height: 40px;
+      margin-right: 5px;
+    }
+
+    .google-book-btn {
+      color: $white;
+      border: none;
+      background-color: $g-red;
+      height: 40px;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .login-header {
+    padding: 3%;
+  }
+
+  .login-content {
+    height: calc(100% - 50px);
+    padding: 3%;
+  }
+}

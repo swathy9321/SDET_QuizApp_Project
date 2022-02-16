@@ -1,0 +1,19 @@
+<div class="content mat-elevation-z4">
+    <mat-card>
+        <div class="search-result_head">
+            <div>
+                <div *ngFor="let quiz of question">
+                    <mat-card-title>Question {{count+1}}</mat-card-title>
+                    <p id="qtext">{{quiz.question}}</p>
+                    <div class="form-check" *ngFor="let choice of quiz.choices;let i=index">
+                        <input class="form-check-input" value="i+1" type="radio" name="i" id="flexRadio" (click)="chooseAnswer(quiz.id,i+1)">
+                        <label class="form-check-label" for="i">{{choice}}</label>
+                    </div>                
+                    <mat-card-actions>
+                        <button mat-button class="button"  (click)="nextOf(quiz.id)" [disabled]="buttonDisable"> Next > </button>
+                    </mat-card-actions>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>

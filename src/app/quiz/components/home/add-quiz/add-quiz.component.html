@@ -1,0 +1,67 @@
+<h3>Add Quiestions</h3>
+<hr>
+<mat-card class="mat-elevation-z4">
+    <form [formGroup]="addForm" (ngSubmit)="saveQuiz()">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <div class="form-group">
+                <label for="Question">Question</label>
+                <input type="question" formControlName="question" (keyup)="0" class="form-control" id="add-question"
+                    placeholder="Enter Question">
+            </div>
+        </div>
+        <br>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <label for="Question">Options:</label>
+            <div class="form-group">
+                <div class="option-group">
+                    <div class="label-group">
+                        <label class="label-group">A</label>
+                    </div>
+
+                    <input type="option1" formControlName="choiceOne" (keyup)="0" class="form-control" id="option1"
+                        placeholder="Enter the First Option"><br>
+                </div>
+                <div class="option-group">
+                    <div class="label-group">
+                        <label>B</label>
+                    </div>
+                    <input type="option2" formControlName="choiceTwo" (keyup)="0" class="form-control" id="option2"
+                        placeholder="Enter the Second Option"><br>
+                </div>
+                <div class="option-group">
+                    <div class="label-group">
+                        <label>C</label>
+                    </div>
+
+                    <input type="option2" formControlName="choiceThree" (keyup)="0" class="form-control" id="option3"
+                        placeholder="Enter the Third Option"><br>
+                </div>
+                <div class="option-group">
+                    <div class="label-group">
+                        <label>D</label>
+                    </div>
+
+                    <input type="option2" formControlName="choiceFour" (keyup)="0" class="form-control" id="option4"
+                        placeholder="Enter the Fourth Option"><br>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <div class="input-group mb-3">
+                <div class="col-8 input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Enter the Correct Answer Choice</label>
+                </div>
+                <select class="col-4 custom-select" id="inputGroupSelect01" formControlName="answer">
+                    <option value="" selected disabled>Choose...</option>
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                    <option value="4">D</option>
+                </select>
+            </div>
+        </div>
+        <mat-card-actions>
+            <button mat-button class="button" type="submit"> ADD </button>
+        </mat-card-actions>
+    </form>
+</mat-card>
